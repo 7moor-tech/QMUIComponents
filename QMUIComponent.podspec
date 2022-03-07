@@ -35,7 +35,7 @@ TODO: Add long description of the pod here.
     '**/QMUIComponent/Assets/*.bundle'
  ]
   
- s.source_files = '**/QMUIComponent/Classes/**/*'
+ s.source_files = '**/QMUIComponent/Classes/**/**/*'
          
   
 
