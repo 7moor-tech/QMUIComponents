@@ -6,4 +6,4 @@ QMUIComponents是容联·七陌平台iOS SDK的功能组件
 
 cocoapods管理
 
-pod 'QMUIComponents', '~> 0.1'
+pod 'QMUIComponents', '~> 0.2'

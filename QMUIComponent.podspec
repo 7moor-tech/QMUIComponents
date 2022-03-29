@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QMUIComponent'
-  s.version          = '0.1'
+  s.version          = '0.2'
   s.summary          = 'A short description of QMUIComponent.'
 
 # This description is used to generate tags and improve search results.
@@ -23,26 +23,29 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/7moor-tech/QMUIComponents'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+ 
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '焦林生' => '18515384635@163.com' }
   s.source           = { :git => 'https://github.com/7moor-tech/QMUIComponents.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  
- s.resource = [
-    '**/QMUIComponent/Assets/*.bundle'
- ]
-  
- s.source_files = '**/QMUIComponent/Classes/**/**/*'
-         
-  
-
-   s.pod_target_xcconfig = {'VALID_ARCHS'=>'armv7 x86_64 arm64'}
-   s.requires_arc = true
+  s.requires_arc = true
    s.frameworks = 'UIKit'
    s.dependency 'QMChatUICore'
+   
+   s.subspec 'QMFileManager' do |manager|
+      manager.source_files = "QMUIComponent/Classes/QMFileManager/**/*.{h,m}"
+   end
+  
+   s.subspec 'QMAudio' do |audio|
+      audio.source_files = "QMUIComponent/Classes/QMAudio/**/*.{h,m}"
+   end
+  
+  s.resource = [
+    '**/QMUIComponent/Assets/*.bundle'
+  ]
+      
+   s.pod_target_xcconfig = {'VALID_ARCHS'=>'armv7 x86_64 arm64'}
    
    #pod trunk push QMUIComponent.podspec --allow-warnings
 end
