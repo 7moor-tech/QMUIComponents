@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface QMAudioAnimation : NSObject
 
 + (QMAudioAnimation *)sharedInstance;

@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];
     CGRect NavRect = self.navigationController.navigationBar.frame;
     _navHeight = StatusRect.size.height + NavRect.size.height;
